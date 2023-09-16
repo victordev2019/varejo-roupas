@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-card>
+        <form [formGroup]="formLogin">
+            <mat-card-content>
+                <div class="formLogin">
+                    <h1 class="centralizarTitulo">Login</h1>
+                    <mat-form-field appearance="outline">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput placeholder="E-mail" formControlName="email">
+                        <mat-error *ngIf="formLogin.get('email')?.errors?.['required']">E-mail é obrigatório</mat-error>
+                        <mat-error *ngIf="formLogin.get('email')?.errors?.['email']">E-mail inválido</mat-error>
+                       </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Senha</mat-label>
+                        <input matInput placeholder="Senha" type="password" formControlName="senha">
+                        <mat-error *ngIf="formLogin.get('senha')?.errors">Senha é obrigatória</mat-error>
+                    </mat-form-field>
+                      <button mat-flat-button color="primary" (click)="login()">Entrar</button>
+                </div>
+            </mat-card-content>
+        </form>
+ </mat-card>
+</div>

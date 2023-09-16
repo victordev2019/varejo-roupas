@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    mat-card {
+        min-width: 400px;
+        padding-bottom: 50px;
+    }
+    .centralizarTitulo {
+        text-align: center;
+        color: #50d3cc;
+    }
+    .formLogin {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+    button {
+        display: flex;
+        align-self: center;
+        background-color: #50d3cc;
+        margin-top: 40px;
+        width: 80%;
+    }
+}

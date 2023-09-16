@@ -1,0 +1,32 @@
+ .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 20px;
+     .titulo-card{
+        color: #50d3cc;
+     }
+     .form-field {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+      .form-field-complemento {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+      }
+        button {
+        background-color: #50d3cc;
+        color: white;
+        margin-right: 12px;
+  }
+
+  }
+  
+  

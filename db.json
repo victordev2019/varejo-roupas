@@ -1,0 +1,16 @@
+{
+  "empresas": [
+    {
+      "id": 1,
+      "cnpj": "12.212.121/2121-21",
+      "razaoSocial": "Sapatos Mania",
+      "cep": "72155-803",
+      "endereco": "QNL 8 Conjunto C",
+      "numero": "13",
+      "complemento": "",
+      "bairro": "Taguatinga Norte (Taguatinga)",
+      "cidade": "Brasília",
+      "estado": "Brasil"
+    }
+  ]
+}

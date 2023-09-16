@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    .table {
+        width: 100%;
+    }
+    button {
+        background-color: #50d3cc;
+        color: white;
+        margin-right: 12px;
+  }
+}

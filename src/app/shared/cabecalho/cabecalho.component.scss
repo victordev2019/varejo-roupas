@@ -1,0 +1,28 @@
+.mat-toolbar {
+    background-color: #50d3cc;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    .cursorMouse {
+      cursor: pointer;
+    }
+  }
+  
+  .links-toolbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .links-toolbar button {
+    margin-left: 10px;
+  }
+  
+  /* Media query para ajustar o layout em telas menores */
+  @media (max-width: 768px) {
+    .mat-toolbar {
+      flex-direction: column; 
+      align-items: center;
+    }
+  }

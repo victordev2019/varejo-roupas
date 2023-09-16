@@ -1,0 +1,65 @@
+<div class="container">
+    <mat-card>
+      <form [formGroup]="cadastroForm">
+        <mat-card-content>
+          <h1 class="titulo-card">{{textoCadastrarAtualizarTitulo()}}</h1>
+          <div class="form-field">
+            <mat-form-field appearance="outline">
+              <mat-label>CNPJ</mat-label>
+              <input matInput placeholder="Cnpj" formControlName="cnpj" (input)="onCNPJInputChange($event)">
+              <mat-error *ngIf="cadastroForm.get('cnpj')?.errors">Cnpj é obrigatório</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>RAZÃO SOCIAL</mat-label>
+              <input matInput placeholder="Razão social" formControlName="razaoSocial">
+              <mat-error *ngIf="cadastroForm.get('razaoSocial')?.errors">Razão social é obrigatório</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>CEP</mat-label>
+              <input matInput placeholder="Cep" formControlName="cep" (input)="onCEPInputChange($event)">
+              <mat-error *ngIf="cadastroForm.get('cep')?.errors">Cep é obrigatório</mat-error>
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-flat-button color="primary" (click)="buscarCEP()">Pesquisar</button>
+            </mat-card-actions>
+        </div>
+        <div class="form-field-complemento">
+            <mat-form-field appearance="outline">
+              <mat-label>ENDEREÇO</mat-label>
+              <input matInput placeholder="Endereço" formControlName="endereco">
+              <mat-error *ngIf="cadastroForm.get('endereco')?.errors">Endereço é obrigatório</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>NÚMERO</mat-label>
+              <input matInput placeholder="Numero" formControlName="numero" type="number">
+              <mat-error *ngIf="cadastroForm.get('numero')?.errors">Número é obrigatório</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>COMPLEMENTO</mat-label>
+              <input matInput placeholder="Complemento" formControlName="complemento">
+            </mat-form-field>
+           </div>
+           <div class="form-field-complemento">
+            <mat-form-field appearance="outline">
+                <mat-label>BAIRRO</mat-label>
+                <input matInput placeholder="Bairro" formControlName="bairro">
+                <mat-error *ngIf="cadastroForm.get('bairro')?.errors">Bairro é obrigatório</mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>CIDADE</mat-label>
+                <input matInput placeholder="Cidade" formControlName="cidade">
+                <mat-error *ngIf="cadastroForm.get('cidade')?.errors">Cidade é obrigatório</mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>ESTADO</mat-label>
+                <input matInput placeholder="Estado" formControlName="estado">
+                <mat-error *ngIf="cadastroForm.get('estado')?.errors">Estado é obrigatório</mat-error>
+              </mat-form-field>
+           </div>
+           <button mat-flat-button color="primary" (click)="submitEmpresa()">{{textoCadastrarAtualizar()}}</button>
+           <button mat-flat-button color="primary" (click)="limparCampos()">Limpar</button>
+           <button mat-flat-button color="primary" (click)="voltarTelaAnterior()">Voltar</button>
+        </mat-card-content>
+      </form>
+    </mat-card>
+  </div>
